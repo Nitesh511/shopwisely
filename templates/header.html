@@ -1,0 +1,65 @@
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"/>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<nav class="navbar navbar-expand-lg navbar-dark bg-info">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/products/homepage">ShopWisely</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link {{activate_home}}" aria-current="page" href="/products/homepage">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{activate_products_user}}" aria-current="page"
+                       href="/products/get_product_user">Products</a>
+                </li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{activate_category_user}}" aria-current="page"
+                       href="/products/get_category_user">Category</a>
+                </li>
+
+
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link {{activate_my_cart}}" href="/products/mycart">
+                        <span class="sr-only">unread messages</span>Cart<i class="fas fa-shopping-cart"></i><span
+                            class="badge rounded-pill bg-danger">{{cart_no}}</span></a>
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{activate_myorders}}" href="/products/my_order">My Orders</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{activate_profile}}" href="/profile"><img
+                            src="/{{request.user.profile.profile_pic}}" width="25" class="rounded-circle ">{{request.user.username}}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{activate_password}}" href="/password_change_user">Change Password</a>
+                </li>
+                {% else %}
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{activate_login}} bg-success " href="/login"><i class="fas fa-sign-in-alt"></i>Login</a>
+                </li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{activate_register}} bg-primary" href="/register">Register</a>
+                </li>
+                {% endif%}
+
+
+            </ul>
+
+        </div>
+    </div>
+</nav>

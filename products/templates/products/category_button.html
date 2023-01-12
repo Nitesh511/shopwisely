@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}
+<title> Details Category</title>
+{% endblock title %}
+
+{% block main_content%}
+<h1> Categories wise items</h1>
+<div class="container">
+    <div class="row justify-content-around">
+        {% for i in categories%}
+        {% for j in i.products_set.all %}
+        <div class="card col-md-2 m-1">
+            <img src="/{{j.product_image}}" class="card-img-top" alt="...">
+            <div class="card-body p-2">
+                <h5 class="card-title">{{j.product_name}}</h5>
+                <p class="card-text">{{j.product_category}}</p>
+                <a href="/products/menu" class="btn btn-primary">Details</a>
+            </div>
+        </div>
+
+        {% endfor %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock main_content %}
+
+

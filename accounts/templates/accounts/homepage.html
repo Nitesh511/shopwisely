@@ -1,0 +1,233 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}
+<title>Homepage</title>
+{% endblock title %}
+
+{% block main_content%}
+<div class="container-fluid p-0">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{%static 'images/designed.jpg'%}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{%static 'images/sliderwatch.png'%}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{%static 'images/slider.png'%}" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+<div class="container">
+    <div class="row bg-danger text-center mt-3 p-5 text-white border-bottom shadow">
+        <h1>SALE IS LIVE NOW</h1>
+        <h1>Dashin Offer</h1>
+        <span>5% Instant Discount on Siddhart Bank Credit and Debit Card</span>
+        <small class="fw-lighter">Term and Condition Applied (For details visit Bank's official Website)</small>
+    </div>
+</div>
+<div class="m-3">
+    <h2>Flash Sale</h2>
+    <!-- Slider 1 -->
+    <div class="owl-carousel" id="slider1">
+        <div class="item"><img src="{% static 'images/iphone1.png' %}" alt="" height="200px"><span class="fw-bold">Iphone 12 Pro</span>
+            <br><span class="fs-5 bu"><a href="/products/get_product_user" class="btn btn-info"
+                                   role="button">Details</a></span></div>
+        </a>
+        <div class="item"><img src="{% static 'images/10pro.jpg' %}" alt="" height="200px"><span class="fw-bold">
+            Redmi Note 10 Pro</span><br><span class="fs-5 bu"><a href="/products/get_product_user" class="btn btn-info"
+                                   role="button">Details</a></span></div>
+        <div class="item"><img src="{% static 'images/iwatch1.jpg' %}" alt="" height="200px"><span class="fw-bold">
+            Apple Watch</span><br><span class="fs-5"><a href="/products/get_product_user" class="btn btn-info" role="button">
+            Details</a></span>
+        </div>
+        <div class="item"><img src="{% static 'images/guitar1.jpg' %}" alt="" height="200px"><span class="fw-bold">
+            Mantra BlackGuitar</span><br><span class="fs-5"><a href="/products/get_product_user" class="btn btn-info" role="button">
+            Details</a></span>
+        </div>
+        <div class="item"><img src="{% static 'images/heater1.jpg' %}" alt="" height="200px"><span class="fw-bold">
+            Kenwood Heater</span><br><span class="fs-5"><a href="/products/get_product_user" class="btn btn-info" role="button">
+            Details</a></span>
+        </div>
+        <div class="item"><img src="{% static 'images/headphone1.jpg' %}" alt="" height="200px"><span class="fw-bold">
+            Digicom Headphone</span><br><span class="fs-5"><a href="/products/get_product_user" class="btn btn-info" role="button">
+            Details</a></span>
+        </div>
+    </div>
+</div>
+<div class="container my-5">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <img src="{% static 'images/connect.png' %}" alt="" srcset="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <img src="{% static 'images/esewa.png' %}" alt="" srcset="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <img src="{% static 'images/fonepay.png' %}" alt="" srcset="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <img src="{% static 'images/khalti.jpg' %}" alt="" srcset="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mx-3">
+    <h2>Trending Deals</h2>
+    <!-- Slider 2 -->
+    <div class="owl-carousel" id="slider2">
+        <div class="item"><img src="{% static 'images/jordan1.jpg' %}" alt="" height="200px"><span class="fw-bold">
+            Jordan Red</span><br><span class="fs-5 bu"><a href="/products/get_product_user" class="btn btn-info"
+                                   role="button">Details</a></span></div>
+        </a>
+        <div class="item"><img src="{% static 'images/t-shirt1.jpg' %}" alt="" height="200px"><span class="fw-bold">
+            T-shirt</span><br><span class="fs-5"><a href="/products/get_product_user" class="btn btn-info" role="button">
+            Details</a></span>
+        </div>
+        <div class="item"><img src="{% static 'images/jordan2.jpg' %}" alt="" height="200px"><span class="fw-bold">
+            Jordan Black</span><br><span class="fs-5"><a href="/products/get_product_user" class="btn btn-info" role="button">
+            Details</a></span>
+        </div>
+        <div class="item"><img src="{% static 'images/jogger1.jpg' %}" alt="" height="200px"><span class="fw-bold">
+            Mens Jogger</span><br><span class="fs-5"><a href="/products/get_product_user" class="btn btn-info" role="button">
+            Details</a></span>
+        </div>
+        <div class="item"><img src="{% static 'images/pant1.jpg' %}" alt="" height="200px"><span class="fw-bold">
+            Slim Pants</span><br><span class="fs-5"><a href="/products/get_product_user" class="btn btn-info" role="button">
+            Details</a></span>
+        </div>
+        <div class="item"><img src="{% static 'images/nike1.jpeg' %}" alt="" height="200px"><span class="fw-bold">
+            Nike Air Force</span><br><span class="fs-5 bu"><a href="/products/get_product_user" class="btn btn-info"
+                                   role="button">Details</a></span></div>
+    </div>
+</div>
+<div class="container my-5">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <img src="{% static 'images/shivam.png' %}" alt="" srcset="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <img src="{% static 'images/pulsar.png' %}" alt="" srcset="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <img src="{% static 'images/real.jpg' %}" alt="" srcset="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <img src="{% static 'images/hulas.png' %}" alt="" srcset="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mx-3">
+    <h2>Mobile Phones</h2>
+    <!-- Slider 2 -->
+    <div class="owl-carousel" id="slider3">
+        <div class="item"><img src="{% static 'images/10pro.jpg' %}" alt="" height="200px"><span class="fw-bold">
+            Redmi Note 10 Pro</span><br><span class="fs-5 bu"><a href="/products/get_product_user" class="btn btn-info"
+                                   role="button">Details</a></span></div>
+        </a>
+        <div class="item"><img src="{% static 'images/oneplus1.png' %}" alt="" height="200px"><span class="fw-bold">
+            One Plus Nord</span><br><span class="fs-5"><a href="/products/get_product_user" class="btn btn-info" role="button">
+            Details</a></span>
+        </div>
+        <div class="item"><img src="{% static 'images/samsungfold.jpg' %}" alt="" height="200px"><span class="fw-bold">
+            Samsung Fold</span><br><span class="fs-5"><a href="/products/get_product_user" class="btn btn-info" role="button">
+            Details</a></span>
+        </div>
+        <div class="item"><img src="{% static 'images/huawei nova8.jpg' %}" alt="" height="200px"><span class="fw-bold">
+            Huawei Nova 8</span><br><span class="fs-5"><a href="/products/get_product_user" class="btn btn-info" role="button">
+            Details</a></span>
+        </div>
+        <div class="item"><img src="{% static 'images/iphone13.jpg' %}" alt="" height="200px"><span class="fw-bold">
+            Iphone 13 Pro</span><br><span class="fs-5"><a href="/products/get_product_user" class="btn btn-info" role="button">
+            Details</a></span>
+        </div>
+        <div class="item"><img src="{% static 'images/nokia.jpg' %}" alt="" height="200px"><span class="fw-bold">
+            Nokia A30S</span><br><span class="fs-5 bu"><a href="/products/get_product_user" class="btn btn-info"
+                                   role="button">
+            Details</a></span></div>
+    </div>
+</div>
+<div class="mx-3">
+    <h2>Electronics</h2>
+    <!-- Slider 2 -->
+    <div class="owl-carousel" id="slider3">
+        <div class="item"><img src="{% static 'images/heater1.jpg' %}" alt="" height="200px"><span class="fw-bold">
+            KenWood Heater</span><br><span class="fs-5 bu"><a href="/products/get_product_user" class="btn btn-info"
+                                   role="button">Details</a></span></div>
+        </a>
+        <div class="item"><img src="{% static 'images/gyser.jpg' %}" alt="" height="200px"><span class="fw-bold">
+            Hilltake Water Gyser</span><br><span class="fs-5"><a href="/products/get_product_user" class="btn btn-info"
+                                                                 role="button">Details</a></span>
+        </div>
+        <div class="item"><img src="{% static 'images/fan.jpg' %}" alt="" height="200px"><span class="fw-bold">
+            Baltra Fan</span><br><span class="fs-5"><a href="/products/get_product_user" class="btn btn-info" role="button">
+            Details</a></span>
+        </div>
+        <div class="item"><img src="{% static 'images/ricecooker.jpg' %}" alt="" height="200px"><span class="fw-bold">
+            Rice Cooker</span><br><span
+                class="fs-5"><a href="/products/get_product_user" class="btn btn-info" role="button">Details</a></span>
+        </div>
+        <div class="item"><img src="{% static 'images/tv.jpg' %}" alt="" height="200px"><span
+                class="fw-bold">Samsung Tv</span><br><span class="fs-5"><a href="/products/get_product_user"
+                                                                           class="btn btn-info"
+                                                                           role="button">Details</a></span></div>
+        <div class="item"><img src="{% static 'images/nokia.jpg' %}" alt="" height="200px"><span class="fw-bold">
+            Nokia A30S</span><br><span class="fs-5 bu"><a href="/products/get_product_user" class="btn btn-info"
+                                   role="button">Details</a></span></div>
+    </div>
+</div>
+
+{% endblock main_content %}
+
